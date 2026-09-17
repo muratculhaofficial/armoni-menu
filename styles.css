@@ -756,3 +756,76 @@ footer {
     background-size: cover;
   }
 }
+
+
+/* =========================================================
+   MOBİL SON DÜZELTME
+   - Tek arka plan
+   - Sabit
+   - Tekrar yok
+   - Sağ/sol kırpma yok
+   - Ekrana tam sığar
+   ========================================================= */
+@media (max-width: 800px) {
+  body::before {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+
+    background-image: url('armoni-hero-bg.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+
+    /* Görseli telefon ekranına tam oturtur, hiçbir tarafı taşmaz */
+    background-size: 100% 100% !important;
+
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  main,
+  .hero,
+  .section,
+  .intro,
+  .menu-section,
+  .music,
+  .contact,
+  footer {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .section {
+    width: calc(100% - 28px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .hero {
+    min-height: 100dvh !important;
+  }
+}
+
+@media (max-width: 520px) {
+  body::before {
+    width: 100vw !important;
+    height: 100dvh !important;
+    background-size: 100% 100% !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .hero {
+    min-height: 100dvh !important;
+  }
+}
