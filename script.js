@@ -199,20 +199,20 @@ const menuData = [
 ];
 
 const categoryImageMap = {
-  "Tostlar": "assets/toast.jpg",
-  "Pilav": "assets/pilav.jpg",
-  "Makarna": "assets/pasta.jpg",
-  "Ekmek Arası Izgara Menü": "assets/ekmek_arasi.jpg",
-  "Izgara Dürümler": "assets/durum.jpg",
-  "Izgara Menü": "assets/izgara_mixed.jpg",
-  "İçecekler": "assets/drinks.jpg"
+  "Tostlar": "menu-tost.jpg",
+  "Pilav": "menu-pilav.jpg",
+  "Makarna": "menu-makarna.jpg",
+  "Ekmek Arası Izgara Menü": "menu-ekmek-arasi.jpg",
+  "Izgara Dürümler": "menu-durum.jpg",
+  "Izgara Menü": "menu-izgara.jpg",
+  "İçecekler": "menu-icecek.jpg"
 };
 
 const itemImageMap = {
-  "Et Burger": "assets/burger_classic.jpg",
-  "Chicken Burger": "assets/burger_classic.jpg",
-  "BBQ Chicken Burger": "assets/burger_bbq.jpg",
-  "BBQ Et Burger": "assets/burger_bbq.jpg"
+  "Et Burger": "menu-burger.jpg",
+  "Chicken Burger": "menu-burger.jpg",
+  "BBQ Chicken Burger": "menu-burger-bbq.jpg",
+  "BBQ Et Burger": "menu-burger-bbq.jpg"
 };
 
 const tabs = document.getElementById("categoryTabs");

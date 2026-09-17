@@ -1,20 +1,5 @@
-# Armoni Cafe Görselli Menü
+# Armoni Cafe Görselli Menü - GitHub Root Sürümü
 
-Bu paket, mevcut Armoni Cafe tek-sabit-arka-planlı web sitesinin güncellenmiş sürümüdür.
+Bu sürümde tüm menü görselleri ana dizindedir. GitHub Pages için klasör yolu sorunu yaşamamak amacıyla assets klasörü kaldırılmıştır.
 
-## İçerik
-- Mobil ve masaüstü uyumlu tek sabit arka plan yapısı
-- Menü kartlarında temsilî yemek/içecek görselleri
-- İletişim bilgileri ve adres güncellenmiş hâli
-- GitHub Pages üzerinde yayınlamaya hazır statik dosyalar
-
-## Dosyalar
-- `index.html`
-- `styles.css`
-- `script.js`
-- `armoni-hero-bg.png`
-- `armoni-mobile-bg.png`
-- `assets/` klasörü içindeki menü görselleri
-
-## GitHub'a yükleme
-Mevcut repoda tüm eski dosyaları bu pakettekilerle değiştirip commit/push yapmanız yeterlidir.
+Tüm dosyaları repository kök dizinine yükleyin.
