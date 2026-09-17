@@ -200,25 +200,56 @@ const menuData = [
 
 const categoryImageMap = {
   "Tostlar": "menu-tost.jpg",
+  "Burger": "menu-burger.jpg",
   "Pilav": "menu-pilav.jpg",
   "Makarna": "menu-makarna.jpg",
   "Ekmek Arası Izgara Menü": "menu-ekmek-arasi.jpg",
   "Izgara Dürümler": "menu-durum.jpg",
   "Izgara Menü": "menu-izgara.jpg",
-  "İçecekler": "menu-icecek.jpg"
+  "İçecekler": "menu-icecekler-banner.webp"
 };
 
 const itemImageMap = {
-  "Et Burger": "menu-burger.jpg",
-  "Chicken Burger": "menu-burger.jpg",
-  "BBQ Chicken Burger": "menu-burger-bbq.jpg",
-  "BBQ Et Burger": "menu-burger-bbq.jpg"
+  "Dana Sucuklu Karışık Tost": "item-dana-sucuklu-karisik-tost.webp",
+  "Kaşarlı Tost": "item-kasarli-tost.webp",
+  "Et Burger": "item-et-burger.webp",
+  "Chicken Burger": "item-chicken-burger.webp",
+  "BBQ Chicken Burger": "item-bbq-chicken-burger.webp",
+  "BBQ Et Burger": "item-bbq-et-burger.webp",
+  "Ekmek Arası Tavuk Izgara": "item-ekmek-arasi-tavuk-izgara.webp",
+  "Ekmek Arası Dana Köfte Izgara": "item-ekmek-arasi-dana-kofte-izgara.webp",
+  "Ekmek Arası Kaşarlı Dana Köfte Izgara": "item-ekmek-arasi-kasarli-dana-kofte-izgara.webp",
+  "Ekmek Arası Dana Sucuk Izgara": "item-ekmek-arasi-dana-sucuk-izgara.webp",
+
+  "Tavuk Izgara Dürüm": "item-tavuk-izgara-durum.webp",
+  "Barbekü Soslu Tavuk Izgara Dürüm": "item-barbeku-soslu-tavuk-izgara-durum.webp",
+  "Kaşarlı Tavuk Izgara Dürüm": "item-kasarli-tavuk-izgara-durum.webp",
+  "Tavuk Wrap Dürüm": "item-tavuk-wrap-durum.webp",
+  "BBQ Tavuk Wrap Dürüm": "item-bbq-tavuk-wrap-durum.webp",
+  "Dana Ciğer Dürüm": "item-dana-ciger-durum.webp",
+  "Dana Et Dürüm": "item-dana-et-durum.webp",
+
+  "Izgara Tavuk Kanat": "item-izgara-tavuk-kanat.webp",
+  "Izgara Tavuk Şiş": "item-izgara-tavuk-sis.webp",
+  "Izgara Tavuk Pirzola": "item-izgara-tavuk-pirzola.webp",
+  "Izgara Dana Ciğer": "item-izgara-dana-ciger.webp",
+  "Izgara Dana Pirzola": "item-izgara-dana-pirzola.webp",
+  "Izgara Dana Köfte": "item-izgara-dana-kofte.webp",
+
+  "Tavuk & Pilav": "item-tavuk-pilav.webp",
+  "Köri Soslu Tavuk & Pilav": "item-kori-soslu-tavuk-pilav.webp",
+  "Soya Soslu Tavuk & Pilav": "item-soya-soslu-tavuk-pilav.webp",
+
+  "Fettuccine Alfredo": "item-fettuccine-alfredo.webp",
+  "Pesto Soslu Makarna": "item-pesto-soslu-makarna.webp",
+  "Spaghetti Napolitana": "item-spaghetti-napolitana.webp"
 };
 
 const tabs = document.getElementById("categoryTabs");
 const grid = document.getElementById("menuGrid");
 
 function imageForItem(item, category) {
+  if (category === "İçecekler") return "";
   return itemImageMap[item.name] || categoryImageMap[category] || "";
 }
 
@@ -248,6 +279,20 @@ function renderMenu(category) {
       </div>
     `;
     return;
+  }
+
+  if (category === "İçecekler") {
+    const banner = document.createElement("div");
+    banner.className = "category-banner";
+
+    const bannerImg = document.createElement("img");
+    bannerImg.src = "menu-icecekler-banner.webp";
+    bannerImg.alt = "Armoni Cafe içecekler";
+    bannerImg.loading = "lazy";
+    bannerImg.decoding = "async";
+
+    banner.appendChild(bannerImg);
+    grid.appendChild(banner);
   }
 
   group.items.forEach(item => {
