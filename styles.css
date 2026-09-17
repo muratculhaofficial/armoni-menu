@@ -829,3 +829,57 @@ footer {
     min-height: 100dvh !important;
   }
 }
+
+
+/* =========================================================
+   YENİ MOBİL ARKA PLAN
+   Masaüstü: mevcut yatay görsel
+   Mobil: yeni dikey Armoni görseli
+   ========================================================= */
+
+/* Masaüstü */
+body::before {
+  background-image: url('armoni-hero-bg.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+}
+
+/* Mobil */
+@media (max-width: 800px) {
+  body::before {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+
+    background-image: url('armoni-mobile-bg.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .hero {
+    min-height: 100dvh !important;
+  }
+}
+
+@media (max-width: 520px) {
+  body::before {
+    background-image: url('armoni-mobile-bg.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
