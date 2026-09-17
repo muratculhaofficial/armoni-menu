@@ -660,3 +660,99 @@ footer strong {
     padding-bottom: 44px;
   }
 }
+
+
+/* =========================================================
+   TEK SABİT ARKA PLAN — MASAÜSTÜ + MOBİL
+   Sayfa içeriği bu tek görselin üzerinde kayar.
+   Görsel tekrar etmez.
+   ========================================================= */
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  background: #120f0d !important;
+  background-image: none !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+}
+
+/* Tek ve sabit arka plan görseli */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image: url('armoni-hero-bg.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  /* Android/iOS tarayıcılarda kaydırma sırasında stabil görüntü */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Tüm ana bölümler şeffaf; tek görsel arkada kalır */
+.topbar,
+main,
+.hero,
+.section,
+.intro,
+.menu-section,
+.music,
+.contact,
+footer {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Eski hero arka plan/katmanlarının tekrar görsel oluşturmasını engelle */
+.hero::before,
+.hero::after,
+.hero-overlay {
+  background-image: none !important;
+}
+
+/* MOBİL: görsel tek parça, sabit ve tekrar etmiyor */
+@media (max-width: 800px) {
+  body {
+    background: #120f0d !important;
+    background-image: none !important;
+  }
+
+  body::before {
+    width: 100vw;
+    height: 100dvh;
+    min-height: 100vh;
+    background-image: url('armoni-hero-bg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .hero {
+    min-height: 72vh;
+    background: transparent !important;
+  }
+}
+
+/* Dar telefonlarda da aynı tek görsel korunur */
+@media (max-width: 520px) {
+  body::before {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+}
