@@ -5,12 +5,12 @@ const menuData = [
       {
         name: "Dana Sucuklu Karışık Tost",
         description: "Bazlama ekmeği, dana sucuk, kaşar peyniri, ketçap, mayonez ve salatalık turşusu",
-        price: ""
+        price: "130 ₺"
       },
       {
         name: "Kaşarlı Tost",
         description: "Bazlama ekmeği, kaşar peyniri, ketçap, mayonez ve salatalık turşusu",
-        price: ""
+        price: "120 ₺"
       }
     ]
   },
@@ -20,22 +20,22 @@ const menuData = [
       {
         name: "Et Burger",
         description: "Dana köfte, cheddar peyniri, karamelize soğan, marul, domates, turşu, patates kızartması ve Armoni özel sos",
-        price: ""
+        price: "300 ₺"
       },
       {
         name: "Chicken Burger",
         description: "Çıtır tavuk, cheddar peyniri, marul, turşu, domates, burger sos ve patates kızartması",
-        price: ""
+        price: "250 ₺"
       },
       {
         name: "BBQ Chicken Burger",
         description: "Çıtır tavuk göğsü, barbekü sos, cheddar peyniri, karamelize soğan, turşu, marul ve patates kızartması",
-        price: ""
+        price: "280 ₺"
       },
       {
         name: "BBQ Et Burger",
         description: "Dana köfte, BBQ sos, cheddar peyniri, karamelize soğan, marul, domates, turşu ve patates kızartması",
-        price: ""
+        price: "300 ₺"
       }
     ]
   },
@@ -45,17 +45,17 @@ const menuData = [
       {
         name: "Tavuk & Pilav",
         description: "Tavuk göğsü, nohutlu pilav, turşu, mısır, ketçap ve mayonez",
-        price: ""
+        price: "130 ₺"
       },
       {
         name: "Köri Soslu Tavuk & Pilav",
         description: "Tavuk, pilav, mantar, krema, köri sos, kapya ve yeşil biber, turşu ve tereyağı",
-        price: ""
+        price: "140 ₺"
       },
       {
         name: "Soya Soslu Tavuk & Pilav",
         description: "Tavuk, pilav, mantar, krema, soya sos, kapya ve yeşil biber, turşu ve tereyağı",
-        price: ""
+        price: "130 ₺"
       }
     ]
   },
@@ -65,17 +65,17 @@ const menuData = [
       {
         name: "Fettuccine Alfredo",
         description: "Fettuccine makarna, tavuk, mantar, krema, parmesan peyniri ve tereyağı",
-        price: ""
+        price: "200 ₺"
       },
       {
         name: "Pesto Soslu Makarna",
         description: "Penne makarna, pesto sos, krema, parmesan peyniri ve tereyağı",
-        price: ""
+        price: "180 ₺"
       },
       {
         name: "Spaghetti Napolitana",
         description: "Spaghetti makarna, Napoliten sos, parmesan peyniri, taze fesleğen ve tereyağı",
-        price: ""
+        price: "230 ₺"
       }
     ]
   },
@@ -85,22 +85,22 @@ const menuData = [
       {
         name: "Ekmek Arası Tavuk Izgara",
         description: "Tavuk bonfile, domates, biber, soğan, marul ve yanında patates kızartması",
-        price: ""
+        price: "150 ₺"
       },
       {
         name: "Ekmek Arası Dana Köfte Izgara",
         description: "5 adet dana köfte, sumaklı soğan, domates, biber, maydanoz ve yanında patates kızartması",
-        price: ""
+        price: "180 ₺"
       },
       {
         name: "Ekmek Arası Kaşarlı Dana Köfte Izgara",
         description: "5 adet dana köfte, kaşar peyniri, sumaklı soğan, domates, biber, maydanoz ve yanında patates kızartması",
-        price: ""
+        price: "190 ₺"
       },
       {
         name: "Ekmek Arası Dana Sucuk Izgara",
         description: "4 adet dana parmak sucuk, soğan, domates, biber, maydanoz ve yanında patates kızartması",
-        price: ""
+        price: "160 ₺"
       }
     ]
   },
@@ -110,37 +110,37 @@ const menuData = [
       {
         name: "Tavuk Izgara Dürüm",
         description: "Tavuk bonfile, domates, biber, soğan, marul, sos ve yanında patates kızartması",
-        price: ""
+        price: "160 ₺"
       },
       {
         name: "Barbekü Soslu Tavuk Izgara Dürüm",
         description: "Tavuk bonfile, barbekü sos, cheddar peyniri, marul ve yanında patates kızartması",
-        price: ""
+        price: "160 ₺"
       },
       {
         name: "Kaşarlı Tavuk Izgara Dürüm",
         description: "Tavuk bonfile, kaşar peyniri, özel sos, marul ve yanında patates kızartması",
-        price: ""
+        price: "170 ₺"
       },
       {
         name: "Tavuk Wrap Dürüm",
         description: "Tavuk, mantar, biber, kapya biber, krema, soya sosu, kaşar peyniri, marul ve yanında patates kızartması",
-        price: ""
+        price: "200 ₺"
       },
       {
         name: "BBQ Tavuk Wrap Dürüm",
         description: "Tavuk, mantar, biber, kapya biber, krema, soya sosu, kaşar peyniri, barbekü sos, marul ve yanında patates kızartması",
-        price: ""
+        price: "200 ₺"
       },
       {
         name: "Dana Ciğer Dürüm",
         description: "Dana ciğeri, sumaklı soğan, biber, domates ve yanında patates kızartması",
-        price: ""
+        price: "250 ₺"
       },
       {
         name: "Dana Et Dürüm",
         description: "Dana eti, soğan, biber, domates, yeşillik ve yanında patates kızartması",
-        price: ""
+        price: "260 ₺"
       }
     ]
   },
@@ -150,32 +150,32 @@ const menuData = [
       {
         name: "Izgara Tavuk Kanat",
         description: "Tavuk kanat (250 g), biber, domates, pilav, lavaş ve patates kızartması",
-        price: ""
+        price: "300 ₺"
       },
       {
         name: "Izgara Tavuk Şiş",
         description: "Tavuk bonfile ve göğüs (250 g), biber, domates, pilav, lavaş ve patates kızartması",
-        price: ""
+        price: "280 ₺"
       },
       {
         name: "Izgara Tavuk Pirzola",
         description: "Tavuk pirzola (250 g), biber, domates, pilav, lavaş ve patates kızartması",
-        price: ""
+        price: "290 ₺"
       },
       {
         name: "Izgara Dana Ciğer",
         description: "Dana ciğer (250 g), biber, domates, pilav, lavaş ve patates kızartması",
-        price: ""
+        price: "400 ₺"
       },
       {
         name: "Izgara Dana Pirzola",
         description: "Dana pirzola (250 g), biber, domates, pilav, lavaş ve patates kızartması",
-        price: ""
+        price: "450 ₺"
       },
       {
         name: "Izgara Dana Köfte",
         description: "8 adet dana köfte, biber, domates, soğan, pilav, lavaş ve patates kızartması",
-        price: ""
+        price: "400 ₺"
       }
     ]
   },
