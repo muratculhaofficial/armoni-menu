@@ -198,8 +198,29 @@ const menuData = [
   }
 ];
 
+const categoryImageMap = {
+  "Tostlar": "assets/toast.jpg",
+  "Pilav": "assets/pilav.jpg",
+  "Makarna": "assets/pasta.jpg",
+  "Ekmek Arası Izgara Menü": "assets/ekmek_arasi.jpg",
+  "Izgara Dürümler": "assets/durum.jpg",
+  "Izgara Menü": "assets/izgara_mixed.jpg",
+  "İçecekler": "assets/drinks.jpg"
+};
+
+const itemImageMap = {
+  "Et Burger": "assets/burger_classic.jpg",
+  "Chicken Burger": "assets/burger_classic.jpg",
+  "BBQ Chicken Burger": "assets/burger_bbq.jpg",
+  "BBQ Et Burger": "assets/burger_bbq.jpg"
+};
+
 const tabs = document.getElementById("categoryTabs");
 const grid = document.getElementById("menuGrid");
+
+function imageForItem(item, category) {
+  return itemImageMap[item.name] || categoryImageMap[category] || "";
+}
 
 function renderTabs(activeCategory) {
   tabs.innerHTML = "";
@@ -233,27 +254,48 @@ function renderMenu(category) {
     const card = document.createElement("article");
     card.className = "menu-item";
 
-    const text = document.createElement("div");
+    const imageSrc = imageForItem(item, category);
+    if (imageSrc) {
+      const media = document.createElement("div");
+      media.className = "menu-photo-wrap";
+
+      const img = document.createElement("img");
+      img.className = "menu-photo";
+      img.src = imageSrc;
+      img.alt = item.name;
+      img.loading = "lazy";
+      img.decoding = "async";
+
+      media.appendChild(img);
+      card.appendChild(media);
+    }
+
+    const body = document.createElement("div");
+    body.className = "menu-body";
+
+    const head = document.createElement("div");
+    head.className = "menu-head";
 
     const title = document.createElement("h3");
     title.textContent = item.name;
-    text.appendChild(title);
-
-    if (item.description) {
-      const description = document.createElement("p");
-      description.textContent = item.description;
-      text.appendChild(description);
-    }
-
-    card.appendChild(text);
+    head.appendChild(title);
 
     if (item.price) {
       const price = document.createElement("span");
       price.className = "price";
       price.textContent = item.price;
-      card.appendChild(price);
+      head.appendChild(price);
     }
 
+    body.appendChild(head);
+
+    if (item.description) {
+      const description = document.createElement("p");
+      description.textContent = item.description;
+      body.appendChild(description);
+    }
+
+    card.appendChild(body);
     grid.appendChild(card);
   });
 }

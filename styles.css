@@ -883,3 +883,84 @@ body::before {
     background-repeat: no-repeat !important;
   }
 }
+
+
+/* =========================================================
+   GÖRSELLİ MENÜ KARTLARI
+   ========================================================= */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(0,0,0,.18);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  box-shadow: 0 14px 32px rgba(0,0,0,.18);
+}
+
+.menu-photo-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+}
+
+.menu-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.menu-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+}
+
+.menu-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.menu-item h3 {
+  margin: 0;
+}
+
+.menu-item p {
+  margin: 0;
+}
+
+.price {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  padding: 6px 10px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  font-size: 14px;
+}
+
+@media (max-width: 800px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .menu-body {
+    padding: 14px;
+  }
+}
